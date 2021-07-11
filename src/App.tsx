@@ -31,7 +31,7 @@ const App = () => {
   }, [search])
 
   return (
-    <div className='mainSection'>
+    <div className='mainSection' data-testid='app'>
       <Header/>
       <Form search={search} setSearch={setSearch}/>
       {loading ? <Loader/> : <UserList userData={userData} />}
