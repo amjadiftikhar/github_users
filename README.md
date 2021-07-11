@@ -4,7 +4,7 @@ Contributors: Amjad Iftikhar, amjadiftikhar_99@hotmail.com
 
 Hello!
 
-Thank for giving me this opportunity to solve this interesting assignment. I enjoyed a lot working with the assignment. There could be many approaches can be take and of course  
+Thank for giving me this opportunity to solve this interesting assignment. I enjoyed a lot working with the assignment.   
 
 # Task description 
 
