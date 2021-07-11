@@ -7,8 +7,10 @@ type UserProps = {
 
 const User:React.FC<UserProps> = ({userData}) => {
 
+    // State for user details
 	const [showUserDetails, setShowUserDetails] = useState(false);
 
+    // Fuction for setting state
     const showDetails = (e:any) => {
         e.preventDefault();
         setShowUserDetails(!showUserDetails);

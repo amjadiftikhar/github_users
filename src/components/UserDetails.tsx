@@ -7,11 +7,11 @@ type UserDetailProps = {
 
 const UserDetails:React.FC<UserDetailProps> = ({user}) => {
 
-    console.log('user check in userDetails', user)
-
+    // states defined
     const [ details, setDetails ] = useState<any>();
 	const [ loading, setLoading ] = useState(false)
 
+    // function to fetch user details
     const fetchUserDetails = async (login:any) => {
         const githubUrl = `https://api.github.com/users/${login}`;
         setLoading(true);
