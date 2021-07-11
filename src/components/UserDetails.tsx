@@ -29,7 +29,7 @@ const UserDetails:React.FC<UserDetailProps> = ({user}) => {
     }, [user.login])
 
     return (
-        <div className='userDetails'>
+        <div className='userDetails' data-testid='userDetailsTest'>
             { !details && loading ? 
                 <div style={{position:'relative', marginRight:'30%', marginBottom:'20%'}}> 
                     <Loader/> 

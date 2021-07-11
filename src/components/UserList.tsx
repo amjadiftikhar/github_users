@@ -8,7 +8,7 @@ type UserListProps = {
 const UserList:React.FC<UserListProps> = ({userData}) => {
 
     return (
-        <div className='mainContainer'>
+        <div className='mainContainer' data-testid='userListTest'>
             <ul>
                 { userData.length > 0 ? (
                     // mapping through userData and returning container

@@ -17,7 +17,7 @@ const User:React.FC<UserProps> = ({userData}) => {
     }
 
     return (
-        <div className='userCard'>
+        <div className='userCard' data-testid='userTest'>
             <a className='profileContent' href={userData.url} onClick={showDetails}>
                 <img src={userData.avatar_url} alt='profile img' />
                 <div className='userLogin'>

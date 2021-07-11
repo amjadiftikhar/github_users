@@ -8,7 +8,7 @@ type FormProps = {
 const Form: React.FC<FormProps> = ( {search, setSearch} ) => {
 
     return (
-        <form className='userInput'>
+        <form className='userInput' data-testid='formTest'>
             <input 
                 type='text' 
                 placeholder='Enter user name..' 
