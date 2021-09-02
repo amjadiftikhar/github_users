@@ -1,7 +1,7 @@
 import React from 'react';
 
 type FormProps = {
-    search: any;
+    search: string;
     setSearch: any
 }
 
