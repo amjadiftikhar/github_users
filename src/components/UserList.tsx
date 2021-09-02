@@ -10,7 +10,7 @@ const UserList:React.FC<UserListProps> = ({userData}) => {
     return (
         <div className='mainContainer' data-testid='userListTest'>
             <ul>
-                { userData.length > 0 ? (
+                { userData && userData.length > 0 ? (
                     // mapping through userData and returning container
                     userData.map((user:any) => {
                         return(
