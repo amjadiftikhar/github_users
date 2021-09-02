@@ -10,7 +10,18 @@ const App = () => {
 
   const [ userData, setUserData ] = useState([]);
   const [ search, setSearch ] = useState('');
-  const [ loading, setLoading ] = useState(false);  
+  const [ loading, setLoading ] = useState(false);
+  const [searchDelay, setSearchDelay] = useState(0)  
+
+  const handleCall = async (a:any) => {
+    return fetch(a)
+    .then(response => response.json())
+    .then(data => {
+      setUserData(data.items)
+    })
+    .catch(error => console.log(error))
+    .finally(() => setLoading(false))
+  }
 
   useEffect(() => {
     const githubUrl = `https://api.github.com/search/users?`;
@@ -18,13 +29,13 @@ const App = () => {
       const searchedUser = `${githubUrl}q=${search}`;
       if(search) {
         setLoading(true)
-        await fetch(searchedUser)
-          .then(response => response.json())
-          .then(data => {
-            setUserData(data.items)
-          })
-          .catch(error => console.log(error))
-          .finally(() => setLoading(false))
+        if(searchDelay) {
+          clearTimeout(searchDelay)
+        }
+        const setDelay = setTimeout(() => {
+          handleCall(searchedUser)          
+        }, 500);
+        setSearchDelay(setDelay as any)
       }
     }
     fetchUsers();         
